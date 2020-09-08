@@ -5,7 +5,8 @@ $(".btn").on('click', function getLocation(){
     if (navigator.geolocation){
         navigator.geolocation.getCurrentPosition(showPosition)
         $(".card-title").html(currentTime)
-       
+        showPosition()
+       displaycurrentConditions()
     }
 
 })
@@ -51,7 +52,7 @@ function displaycurrentConditions(weatherData){
     var iconimg = "https://openweathermap.org/img/wn/" + weatherData.icon + "@2x.png"
 
 
-    if (weatherData.currentHumidity >= 65)
+    if (weatherData.currentHumidity >= 65 || weatherData.currentWind >= 9)
     {
         $(".card-text1").html("Not So Much")
         $(".card-text2").html("Temperature : " + (weatherData.currentTemp))
@@ -59,13 +60,15 @@ function displaycurrentConditions(weatherData){
         $(".card-text4").html((weatherData.currentConditions))
         $(".card-text5").html("Humidity : " + (weatherData.currentHumidity) + "%")
         $(".card-text6").attr('src', iconimg)
+        $(".card-button").html(" ")
     }
-    else if (weatherData.currentHumidity <= 64){
+    else if (weatherData.currentHumidity <= 64 && weatherData.currentWind < 9){
         $(".card-text1").html("Lookin Pretty Good")
         $(".card-text2").html("Temperature : " + (weatherData.currentTemp))
         $(".card-text3").html("Wind Speed : " + (weatherData.currentWind) + " mph")
         $(".card-text4").html((weatherData.currentConditions))
         $(".card-text5").html("Humidity : " + (weatherData.currentHumidity) + "%")
         $(".card-text5").attr('src', iconimg)
+        $(".card-button").html(" ")
     }
 }
