@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: cornflowerblue;
+    
+  }
+.center-align{
+    text-align: center
+}
+
+.card{
+    background-color: skyblue;
+}
+
+
+.card-title, .card-text1, .card-text2, .card-text3, .card-text4, .card-text5 {
+    color:black;
+}
+
+
+
+.ByLine{
+    text-align: center;
+   color: white;
+}
+
+
+main {
+    flex: 1 0 auto;
+}
+
+
+.card-block{
+    text-align: center;
+    margin: 10%;
+}
+
+.page-footer, .container {
+    text-align: center
+}
+
+.card-button{
+    text-align: center;
+}
+
+.btn{
+    margin-bottom: 5%;
+    background-color:#ee6e73;
+}
+
+.container {
+    margin-bottom: 2%
+}
