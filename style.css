@@ -1,0 +1,69 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: cornflowerblue;
+  }
+
+.brand-logo{
+    text-shadow: 2px 2px 2px #000000;
+}
+
+.center-align{
+    text-align: center
+}
+
+.row{
+    margin-bottom: 0%;
+}
+
+.card{
+    background-color: skyblue;
+    
+}
+
+
+.card-title, .output, .humidity, .tempature, .wind-speed, .conditions {
+    color:black;
+    
+}
+
+.card-title{
+    text-shadow: 1px 1px 1px grey;
+}
+
+.ByLine{
+    text-align: center;
+   color: white;
+}
+
+
+main {
+    flex: 1 0 auto;
+}
+
+
+.card-block{
+    text-align: center;
+    margin: 10%;
+    border-radius: 5px;
+}
+
+.page-footer, .container {
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000
+}
+
+.card-button{
+    text-align: center;
+    text-shadow: 2px 2px 2px grey;
+}
+
+.btn{
+    margin-bottom: 5%;
+    background-color:#ee6e73;
+}
+
+.container {
+    margin-bottom: 2%
+}
