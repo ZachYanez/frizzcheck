@@ -51,7 +51,7 @@ function displaycurrentConditions(weatherData){
     var iconimg = "https://openweathermap.org/img/wn/" + weatherData.icon + "@2x.png"
 
 
-    if (weatherData.currentHumidity >= 65 || weatherData.currentWind >= 9)
+    if (weatherData.currentHumidity >= 65 || weatherData.currentWind >= 15)
     {
         $(".output").html("Not So Much")
         $(".humidity").html("Humidity : " + (weatherData.currentHumidity) + "%")
@@ -61,7 +61,7 @@ function displaycurrentConditions(weatherData){
         $(".icon-img").attr('src', iconimg)
         $(".card-button").html(" ")
     }
-    else if (weatherData.currentHumidity <= 64 && weatherData.currentWind < 9){
+    else if (weatherData.currentHumidity <= 64 && weatherData.currentWind < 15){
         $(".output").html("Lookin Pretty Good")
         $(".humidity").html("Humidity : " + (weatherData.currentHumidity) + "%")
         $(".tempature").html("Temperature : " + (weatherData.currentTemp))
