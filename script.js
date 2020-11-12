@@ -16,7 +16,7 @@ function showPosition(position){
         longitude: position.coords.longitude
 
     };
-    console.log(userLocation)
+    console.log("User Location", userLocation)
     getWeather(userLocation)
 
 }
@@ -31,7 +31,7 @@ function getWeather(userLocation){
         method: "GET"
     })
     .then(function(response){
-        console.log(response)
+        console.log("OpenWeather Response", response)
         const weatherData = {
          currentHumidity : response.main.humidity,
          currentWind : response.wind.speed,
@@ -39,7 +39,7 @@ function getWeather(userLocation){
          currentConditions : response.weather[0].description,
          icon : response.weather[0].icon,
         }
-        console.log(weatherData)
+        console.log("Weather Data used", weatherData)
         displaycurrentConditions(weatherData)
 
     })
@@ -51,9 +51,29 @@ function displaycurrentConditions(weatherData){
     var iconimg = "https://openweathermap.org/img/wn/" + weatherData.icon + "@2x.png"
 
 
-    if (weatherData.currentHumidity >= 65 || weatherData.currentWind >= 15)
+    if (weatherData.currentHumidity >= 75 || weatherData.currentWind >= 15)
     {
-        $(".output").html("Not So Much")
+        $(".output").html("Oh Hell Nah")
+        $(".humidity").html("Humidity : " + (weatherData.currentHumidity) + "%")
+        $(".tempature").html("Temperature : " + (weatherData.currentTemp))
+        $(".wind-speed").html("Wind Speed : " + (weatherData.currentWind) + " mph")
+        $(".conditions").html((weatherData.currentConditions))
+        $(".icon-img").attr('src', iconimg)
+        $(".card-button").html(" ")
+    }
+    else if (weatherData.currentHumidity <= 74 && weatherData.currentHumidity >=70 && weatherData.currentWind >= 15)
+    {
+        $(".output").html("Probs Not")
+        $(".humidity").html("Humidity : " + (weatherData.currentHumidity) + "%")
+        $(".tempature").html("Temperature : " + (weatherData.currentTemp))
+        $(".wind-speed").html("Wind Speed : " + (weatherData.currentWind) + " mph")
+        $(".conditions").html((weatherData.currentConditions))
+        $(".icon-img").attr('src', iconimg)
+        $(".card-button").html(" ")
+    }
+    else if (weatherData.currentHumidity <= 69 && weatherData.currentHumidity >= 65 && weatherData.currentWind <= 14)
+    {
+        $(".output").html("It's feasible") 
         $(".humidity").html("Humidity : " + (weatherData.currentHumidity) + "%")
         $(".tempature").html("Temperature : " + (weatherData.currentTemp))
         $(".wind-speed").html("Wind Speed : " + (weatherData.currentWind) + " mph")
@@ -70,4 +90,4 @@ function displaycurrentConditions(weatherData){
         $(".icon-img").attr('src', iconimg)
         $(".card-button").html(" ")
     }
-}
+};
