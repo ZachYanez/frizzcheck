@@ -73,7 +73,7 @@ function displaycurrentConditions(weatherData){
     }
     else if (weatherData.currentHumidity <= 69 && weatherData.currentHumidity >= 65 && weatherData.currentWind <= 14)
     {
-        $(".output").html("It's feasible") 
+        $(".output").html("It's Feasible") 
         $(".humidity").html("Humidity : " + (weatherData.currentHumidity) + "%")
         $(".tempature").html("Temperature : " + (weatherData.currentTemp))
         $(".wind-speed").html("Wind Speed : " + (weatherData.currentWind) + " mph")
