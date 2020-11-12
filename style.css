@@ -34,9 +34,12 @@ body {
 
 .ByLine{
     text-align: center;
-   color: white;
+    color: white;
 }
 
+.ByLine:hover{
+    color: blue;
+}
 
 main {
     flex: 1 0 auto;
