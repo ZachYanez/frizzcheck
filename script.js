@@ -61,7 +61,7 @@ function displaycurrentConditions(weatherData){
         $(".icon-img").attr('src', iconimg)
         $(".card-button").html(" ")
     }
-    else if (weatherData.currentHumidity <= 74 || weatherData.currentHumidity >=70 && weatherData.currentWind >= 15)
+    else if (weatherData.currentHumidity <= 74 && weatherData.currentHumidity >=70 && weatherData.currentWind >= 15)
     {
         $(".output").html("Probs Not")
         $(".humidity").html("Humidity : " + (weatherData.currentHumidity) + "%")
