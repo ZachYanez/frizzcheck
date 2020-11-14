@@ -23,7 +23,7 @@ function showPosition(position){
 
 // Get Weather
 function getWeather(userLocation){
-    var apiKey = "8508d545d4e36b4c3c13e5d8071e830e";
+    const apiKey = "8508d545d4e36b4c3c13e5d8071e830e";
     queryURL = `https://api.openweathermap.org/data/2.5/weather?lat=${userLocation.latitude}&lon=${userLocation.longitude}&appid=${apiKey}&units=imperial`
 
     $.ajax({
@@ -48,7 +48,7 @@ function getWeather(userLocation){
 
 // Check Hair Function
 function displaycurrentConditions(weatherData){
-    var iconimg = "https://openweathermap.org/img/wn/" + weatherData.icon + "@2x.png"
+    const iconimg = "https://openweathermap.org/img/wn/" + weatherData.icon + "@2x.png"
 
 
     if (weatherData.currentHumidity >= 75 || weatherData.currentWind >= 15)
