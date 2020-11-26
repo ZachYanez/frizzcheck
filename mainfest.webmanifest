@@ -1,0 +1,51 @@
+{
+    "short_name": "FrizzCheck",
+    "name": "FrizzCheck",
+    "icons": [
+        {
+            "src": "/assets/long-wavy-variant.png",
+            "sizes": "72x72",
+            "type": "image/png"
+          },
+          {
+            "src": "/assets/long-wavy-variant.png",
+            "sizes": "96x96",
+            "type": "image/png"
+          }
+        {
+            "src": "/assets/long-wavy-variant.png",
+            "sizes": "128x128",
+            "type": "image/png"
+          },
+        {
+            "src": "/assets/long-wavy-variant.png",
+            "sizes": "144x144",
+            "type": "image/png"
+          },
+        {
+            "src": "/assets/long-wavy-variant.png",
+            "sizes": "152x152",
+            "type": "image/png"
+          },
+        {
+            "src": "/assets/long-wavy-variant.png",
+            "sizes": "192x192",
+            "type": "image/png"
+          },
+        {
+            "src": "/assets/ong-wavy-variant.png",
+            "sizes": "348x348",
+            "type": "image/png"
+          },
+      {
+        "src": "/assets/long-wavy-variant.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+      
+    ],
+    "start_url": "/",
+    "background_color": "#6495ed",
+    "display": "standalone",
+    "theme_color": "#ee6e73"
+}

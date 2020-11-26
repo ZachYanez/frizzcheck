@@ -11,6 +11,7 @@
       <!-- Custom Css -->
       <link rel="stylesheet" href="style.css">
       <link rel="icon" href="./assets/long-wavy-hair-variant.png"/>
+      <link rel="mainfest" href="mainfest.webmanifest">
       
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -80,6 +81,15 @@
       <!--JavaScript at end of body for optimized loading-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script src="dist/index.js"></script>
+      <!-- <script>
+        if ("serviceWorker" in navigator) {
+          window.addEventListener("load", () => {
+            navigator.serviceWorker.register("service-worker.js").then(reg => {
+              console.log("Service Worker is up", reg);
+            });
+          });
+        }
+      </script> -->
     </body>
   </html>
         
