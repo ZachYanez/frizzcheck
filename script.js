@@ -24,6 +24,7 @@ function showPosition(position){
 // Get Weather
 function getWeather(userLocation){
     const apiKey = "8508d545d4e36b4c3c13e5d8071e830e";
+
     queryURL = `https://api.openweathermap.org/data/2.5/weather?lat=${userLocation.latitude}&lon=${userLocation.longitude}&appid=${apiKey}&units=imperial`
 
     $.ajax({
@@ -50,8 +51,16 @@ function getWeather(userLocation){
 function displaycurrentConditions(weatherData){
     const iconimg = "https://openweathermap.org/img/wn/" + weatherData.icon + "@2x.png"
 
-
-    if (weatherData.currentHumidity >= 75 || weatherData.currentWind >= 15)
+    if (weatherData.currentWind >= 20){
+        $(".output").html("It's pretty windy out there so...")
+        $(".humidity").html("Humidity : " + (weatherData.currentHumidity) + "%")
+        $(".tempature").html("Temperature : " + (weatherData.currentTemp))
+        $(".wind-speed").html("Wind Speed : " + (weatherData.currentWind) + " mph")
+        $(".conditions").html((weatherData.currentConditions))
+        $(".icon-img").attr('src', iconimg)
+        $(".card-button").html(" ")
+    }
+    else if (weatherData.currentHumidity >= 75)
     {
         $(".output").html("Oh Hell Nah")
         $(".humidity").html("Humidity : " + (weatherData.currentHumidity) + "%")
@@ -61,7 +70,7 @@ function displaycurrentConditions(weatherData){
         $(".icon-img").attr('src', iconimg)
         $(".card-button").html(" ")
     }
-    else if (weatherData.currentHumidity <= 74 || weatherData.currentHumidity >=70 )
+    else if (weatherData.currentHumidity <= 74 && weatherData.currentHumidity >=70 )
     {
         $(".output").html("Probs Not")
         $(".humidity").html("Humidity : " + (weatherData.currentHumidity) + "%")
@@ -71,7 +80,7 @@ function displaycurrentConditions(weatherData){
         $(".icon-img").attr('src', iconimg)
         $(".card-button").html(" ")
     }
-    else if (weatherData.currentHumidity <= 69 && weatherData.currentHumidity >= 65 && weatherData.currentWind <= 14)
+    else if (weatherData.currentHumidity <= 69 && weatherData.currentHumidity >= 65)
     {
         $(".output").html("It's Feasible") 
         $(".humidity").html("Humidity : " + (weatherData.currentHumidity) + "%")
@@ -81,7 +90,7 @@ function displaycurrentConditions(weatherData){
         $(".icon-img").attr('src', iconimg)
         $(".card-button").html(" ")
     }
-    else if (weatherData.currentHumidity <= 64 && weatherData.currentWind < 15){
+    else if (weatherData.currentHumidity <= 64) {
         $(".output").html("Lookin Pretty Good")
         $(".humidity").html("Humidity : " + (weatherData.currentHumidity) + "%")
         $(".tempature").html("Temperature : " + (weatherData.currentTemp))
