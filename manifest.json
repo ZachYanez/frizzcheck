@@ -4,7 +4,7 @@
     "start_url": "/",
     "background_color": "#6495ed",
     "display": "standalone",
-    "theme_color": "#ee6e73",
+    "theme_color": "#6495ed",
     "icons": [
       {
         "src": "./assets/long-wavy-hair-variant.png",
