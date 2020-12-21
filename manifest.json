@@ -7,7 +7,7 @@
     "theme_color": "#ee6e73",
     "icons": [
       {
-        "src": "/assets/long-wavy-variant.png",
+        "src": "./assets/long-wavy-hair-variant.png",
         "sizes": "512x512",
         "type": "image/png"
       }
