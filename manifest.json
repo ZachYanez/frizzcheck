@@ -2,7 +2,7 @@
     "short_name": "FrizzCheck",
     "name": "FrizzCheck",
     "start_url": "/",
-    "background_color": "#6495ed",
+    "background_color": "#6699ff",
     "display": "standalone",
     "theme_color": "#6495ed",
     "icons": [
