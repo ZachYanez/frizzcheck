@@ -1,7 +1,7 @@
 {
     "short_name": "FrizzCheck",
     "name": "FrizzCheck",
-    "start_url": "/index",
+    "start_url": "/",
     "background_color": "#6495ed",
     "display": "standalone",
     "theme_color": "#ee6e73",
@@ -10,6 +10,11 @@
         "src": "./assets/long-wavy-hair-variant.png",
         "sizes": "512x512",
         "type": "image/png"
+      },
+      {
+        "src": "./assets/long-wavy-hair-variant.png",
+        "type": "image/png",
+        "sizes": "192x192"
       }
       
     ]
