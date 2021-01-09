@@ -15,7 +15,12 @@
         "src": "./assets/long-wavy-hair-variant.png",
         "type": "image/png",
         "sizes": "192x192"
+      },
+      {
+
+        "src": "./assets/FrizzCheck192.png",
+        "type": "image/png",
+        "sizes": "192x192"
       }
-      
     ]
 }
