@@ -23,7 +23,7 @@
 This app will determine if the user  will have a good hair day! Frizzcheck will get the user's location, and output different responses based on humidity and wind speed of that location.It will also display current tempature and an icon that matches the current weather. Uses Open Weather API.  
 
 
-(https://user-images.githubusercontent.com/67520932/106064041-ce87ef80-60be-11eb-898b-f8da35a4bf48.png)
+![FrizzCheck](https://user-images.githubusercontent.com/67520932/106064041-ce87ef80-60be-11eb-898b-f8da35a4bf48.png)
 
 
 
