@@ -62,7 +62,7 @@ function displaycurrentConditions(weatherData){
     }
     else if (weatherData.currentHumidity >= 75)
     {
-        $(".output").html("Oh Hell Nah")
+        $(".output").html(" ✨  No ✨")
         $(".humidity").html("Humidity : " + (weatherData.currentHumidity) + "%")
         $(".tempature").html("Temperature : " + (weatherData.currentTemp))
         $(".wind-speed").html("Wind Speed : " + (weatherData.currentWind) + " mph")
